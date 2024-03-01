@@ -13,8 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Helm dependencies
-        run: helm dependency update my-helm-chart
-
       - name: Deploy Helm chart
         run: helm upgrade my-release-namespace my-helm-chart --namespace my-namespace
