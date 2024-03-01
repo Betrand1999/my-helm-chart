@@ -1,1 +1,18 @@
+replicaCount: 30
+image:
+  repository: betrand1999/self-hosted-image
+  tag: latest
+  pullPolicy: IfNotPresent
+resources:
+  limits:
+    memory: "128Mi"
+    cpu: "500m"
+service:
+  name: new-service
+  type: NodePort
+  port: 20
+  targetPort: 20
+  nodePort: 30000
+namespace:
+  name: dev-namespace
 
