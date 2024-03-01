@@ -7,3 +7,4 @@ metadata:
   annotations:
     meta.helm.sh/release-name: my-release-namespace
     meta.helm.sh/release-namespace: dev-namespace
+
