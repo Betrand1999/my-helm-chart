@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mychart.fullname" . }}
+  name: {{ .Release.Name }}-deployment   # Use .Release.Name instead of include "mychart.fullname"
   namespace: {{ .Values.namespace.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
@@ -21,4 +21,3 @@ spec:
             {{ toYaml .Values.resources | nindent 12 }}
           ports:
             - containerPort: 80
-
