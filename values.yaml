@@ -15,4 +15,3 @@ service:
   nodePort: 30000
 namespace:
   name: dev-namespace
-

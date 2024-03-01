@@ -5,8 +5,5 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: Helm
   annotations:
-    meta.helm.sh/release-name: my-release-namespace
-    meta.helm.sh/release-namespace: dev-namespace
-
-
-
+    meta.helm.sh/release-name: {{ .Release.Name }}
+    meta.helm.sh/release-namespace: {{ .Values.namespace.name }}
