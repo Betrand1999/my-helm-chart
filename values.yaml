@@ -1,4 +1,4 @@
-replicaCount: 30
+replicaCount: 3
 image:
   repository: betrand1999/self-hosted-image
   tag: latest
